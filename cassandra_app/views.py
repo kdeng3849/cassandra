@@ -10,6 +10,7 @@ def index(request):
 def deposit(request):
     data = json.loads(request.body, encoding='utf-8')
     filename = data['filename']
+    contents = request.FILES['file']
     return JsonResponse({'status': 'OK'})
 
 def retreive(request):
