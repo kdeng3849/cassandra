@@ -20,6 +20,7 @@ import cassandra_app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('/', cassandra_app.views.index, name='index'),
     path('deposit/', cassandra_app.views.deposit, name='deposit'),
     path('retreive/', cassandra_app.views.retreive, name='retreive'),
 ]
