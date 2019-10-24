@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import cassandra_app.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('deposit/', cassandra_app.views.deposit, name='deposit'),
+    path('retreive/', cassandra_app.views.retreive, name='retreive'),
 ]
